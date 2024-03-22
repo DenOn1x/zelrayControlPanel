@@ -1,0 +1,125 @@
+body.open-mobile-menu {
+  overflow: hidden;
+}
+
+.btn-green {
+  width: 100%;
+  padding: 12px 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: #25B825;
+  border: none;
+  cursor: pointer;
+  transition: .3s ease;
+
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.64px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  @media screen and (min-width: 991.98px) {
+    &:hover {
+      background: #007E2A;
+    }
+  }
+}
+
+.btn-gray {
+  width: 100%;
+  padding: 12px 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: #E6E6E6;
+  border: none;
+  cursor: pointer;
+  transition: .3s ease;
+
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.64px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  @media screen and (min-width: 991.98px) {
+    &:hover {
+      background: #25B825;
+    }
+  }
+}
+
+.counters {
+  display: flex;
+  max-width: 240px;
+  padding: 8px;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 1px solid #E6E6E6;
+
+  .minus {
+    background: none;
+    cursor: pointer;
+
+    span {
+      display: block;
+      min-width: 20px;
+      width: 20px;
+      height: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: 0.3s ease;
+    }
+  }
+
+  .plus {
+    background: none;
+    cursor: pointer;
+
+    span {
+      display: block;
+      min-width: 20px;
+      width: 20px;
+      height: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: 0.3s ease;
+    }
+  }
+
+  input {
+    width: 100%;
+    background: none;
+    outline: none;
+    color: var(--text-1, #141414);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 142%;
+  }
+}
+
+
+@keyframes showBlock {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

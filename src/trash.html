@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Корзина"
+})
+<body>
+@@include('html/header.html',{})
+<main>
+    <section class="zelray-panel">
+        <div class="zelray-panel__container _container">
+            <div class="zelray-panel__wrapper">
+                <ul>
+                    <li><a href="prices.html"><span style="background-image: url('/img/vectors/ic_goods.svg')"></span>Товары</a>
+                    </li>
+                    <li><a href="orders.html"><span style="background-image: url('/img/vectors/ic_orders.svg')"></span>Заявки
+                        за 3
+                        дня</a>
+                    </li>
+                    <li class="active"><a href="trash.html"><span
+                            style="background-image: url('/img/vectors/ic_trash.svg')"></span>Корзина</a>
+                    </li>
+                </ul>
+                <div class="zelray-panel__logout">
+                    <a href="index.html"><span style="background-image: url('/img/vectors/ic_logout.svg')"></span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="zelray-trash">
+        <div class="zelray-trash__container _container">
+            <h1>Корзина</h1>
+            <div class="zelray-trash__client">
+                <div class="name">Клиент: <span>Михаил Синеокий</span></div>
+                <div class="date">19.03.2024</div>
+            </div>
+            <div class="zelray-trash__head zelray">
+                <div class="zelray__tabs">
+                    <div class="zelray__tab active-tab" data-tab="tab1">
+                        <span>Хутор</span>
+                    </div>
+                    <div class="zelray__tab" data-tab="tab2">
+                        <span>Маленький рай</span>
+                    </div>
+                    <div class="zelray__tab" data-tab="tab3">
+                        <span>Грунт</span>
+                    </div>
+                    <div class="zelray__delete">
+                        <span style="background-image: url('/img/vectors/ic_del.svg')"></span>
+                        <div class="text">Удалить выбранное</div>
+                    </div>
+                </div>
+                <div class="zelray-trash__elements">
+                    <button class="btn-exel"><span style="background-image: url('/img/vectors/ic_exel.svg')"></span>Экспорт
+                        Excel
+                    </button>
+                    <button class="btn-print"><span style="background-image: url('/img/vectors/ic_print.svg')"></span>Печатать
+                        список
+                    </button>
+                </div>
+            </div>
+
+            <div id="tab1" class="zelray-trash zelray__tab-content active-content">
+                <div class="zelray-trash__wrapper">
+                    <div class="zelray-trash__content">
+                        <div class="zelray-trash__item zelray-trash__item--main">
+                            <div class="zelray-trash__item-left">
+                                <label class="checkbox">
+                                    <input type="checkbox" class="checkbox--all" name="checkbox">
+                                    <span class="checkbox__elem"></span>
+                                </label>
+                                <div class="box">
+                                    <div class="name">Название товара</div>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="name">Количество</div>
+                            </div>
+                            <div class="box">
+                                <div class="name">Цена</div>
+                                <span>бел. рубли</span>
+                            </div>
+                        </div>
+                        <div class="zelray-trash__item">
+                            <div class="zelray-trash__item-left">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="checkbox">
+                                    <span class="checkbox__elem"></span>
+                                </label>
+                                <div class="box">
+                                    <div class="name">Ель Бревера (Picea breweriana)*</div>
+                                </div>
+                            </div>
+                            <div class="counters">
+                                <button class="minus"><span
+                                        style="background-image: url('/img/vectors/minus.svg')"></span></button>
+                                <input type="text" value="5" inputmode="numeric">
+                                <button class="plus"><span
+                                        style="background-image: url('/img/vectors/plus.svg')"></span></button>
+                            </div>
+                            <div class="box">
+                                <div class="price">64,00</div>
+                            </div>
+                        </div>
+                        <div class="zelray-trash__item">
+                            <div class="zelray-trash__item-left">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="checkbox">
+                                    <span class="checkbox__elem"></span>
+                                </label>
+                                <div class="box">
+                                    <div class="name">Можжевельник горизонтальный (Juniperus horizontalis "Andorra
+                                        Variegata")*
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="counters">
+                                <button class="minus"><span
+                                        style="background-image: url('/img/vectors/minus.svg')"></span></button>
+                                <input type="text" value="10" inputmode="numeric">
+                                <button class="plus"><span
+                                        style="background-image: url('/img/vectors/plus.svg')"></span></button>
+                            </div>
+                            <div class="box">
+                                <div class="price">9,60</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zelray-trash__order">
+                        <div class="zelray-trash__order-discount">
+                            <div class="text">Добавить скидку (%):</div>
+                            <input type="text" placeholder="Введите скидку">
+                            <button class="btn-gray">Применить</button>
+                        </div>
+                        <div class="zelray-trash__order-submit">
+                            <div class="total">Итого: <span>416</span>руб.</div>
+                            <button class="btn-green">Оформить заявку</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab2" class="zelray-trash zelray__tab-content">
+                <div class="zelray-trash__wrapper">
+                    <div class="zelray-trash__content">
+                        <div class="zelray-trash__item zelray-trash__item--main">
+                            <div class="zelray-trash__item-left">
+                                <label class="checkbox">
+                                    <input type="checkbox" class="checkbox--all" name="checkbox">
+                                    <span class="checkbox__elem"></span>
+                                </label>
+                                <div class="box">
+                                    <div class="name">Название товара</div>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="name">Количество</div>
+                            </div>
+                            <div class="box">
+                                <div class="name">Цена</div>
+                                <span>бел. рубли</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zelray-trash__order">
+                        <div class="zelray-trash__order-discount">
+                            <div class="text">Добавить скидку (%):</div>
+                            <input type="text" placeholder="Введите скидку">
+                            <button class="btn-gray">Применить</button>
+                        </div>
+                        <div class="zelray-trash__order-submit">
+                            <div class="total">Итого: <span>416</span>руб.</div>
+                            <button class="btn-green">Оформить заявку</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="tab3" class="zelray-trash zelray__tab-content">
+                <div class="zelray-trash__wrapper">
+                    <div class="zelray-trash__content">
+                        <div class="zelray-trash__item zelray-trash__item--main">
+                            <div class="zelray-trash__item-left">
+                                <label class="checkbox">
+                                    <input type="checkbox" class="checkbox--all" name="checkbox">
+                                    <span class="checkbox__elem"></span>
+                                </label>
+                                <div class="box">
+                                    <div class="name">Название товара</div>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="name">Количество</div>
+                            </div>
+                            <div class="box">
+                                <div class="name">Цена</div>
+                                <span>бел. рубли</span>
+                            </div>
+                        </div>
+                        <div class="zelray-trash__item">
+                            <div class="zelray-trash__item-left">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="checkbox">
+                                    <span class="checkbox__elem"></span>
+                                </label>
+                                <div class="box">
+                                    <div class="name">Ель Бревера (Picea breweriana)*</div>
+                                </div>
+                            </div>
+                            <div class="counters">
+                                <button class="minus"><span
+                                        style="background-image: url('/img/vectors/minus.svg')"></span></button>
+                                <input type="text" value="5" inputmode="numeric">
+                                <button class="plus"><span
+                                        style="background-image: url('/img/vectors/plus.svg')"></span></button>
+                            </div>
+                            <div class="box">
+                                <div class="price">64,00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zelray-trash__order">
+                        <div class="zelray-trash__order-discount">
+                            <div class="text">Добавить скидку (%):</div>
+                            <input type="text" placeholder="Введите скидку">
+                            <button class="btn-gray">Применить</button>
+                        </div>
+                        <div class="zelray-trash__order-submit">
+                            <div class="total">Итого: <span>416</span>руб.</div>
+                            <button class="btn-green">Оформить заявку</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+</main>
+@@include('html/footer.html',{})
+
+<script src="js/app.min.js"></script>
+</body>
+</html>

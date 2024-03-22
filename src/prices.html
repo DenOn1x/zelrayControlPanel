@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Цены"
+})
+<body>
+@@include('html/header.html',{})
+<main>
+    <section class="zelray-panel">
+        <div class="zelray-panel__container _container">
+            <div class="zelray-panel__wrapper">
+                <ul>
+                    <li class="active"><a href="prices.html"><span
+                            style="background-image: url('/img/vectors/ic_goods.svg')"></span>Товары</a>
+                    </li>
+                    <li><a href="orders.html"><span
+                            style="background-image: url('/img/vectors/ic_orders.svg')"></span>Заявки за 3
+                        дня</a>
+                    </li>
+                    <li><a href="trash.html"><span style="background-image: url('/img/vectors/ic_trash.svg')"></span>Корзина</a>
+                    </li>
+                </ul>
+                <div class="zelray-panel__logout">
+                    <a href="index.html"><span style="background-image: url('/img/vectors/ic_logout.svg')"></span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="zelray-prices">
+        <div class="zelray-prices__container _container">
+            <h1>Товары</h1>
+            <div class="zelray-prices__head">
+                <div class="zelray-prices__dropdown">
+                    <div class="text">Имя / название клиента:</div>
+                    <div class="zelray-prices__select">
+                        <div class="zelray-prices__select-wrapper">
+                            <div class="zelray-prices__select-trigger">
+                                <input type="text" name="client" placeholder="Михаил Синеокий">
+                                <div class="arrow"></div>
+                            </div>
+                            <div class="zelray-prices__select-options">
+                                <span class="zelray-prices__select-option selected" data-value="Михаил Синеокий">Михаил Синеокий</span>
+                                <span class="zelray-prices__select-option" data-value="Тестовый1">Тестовый1</span>
+                                <span class="zelray-prices__select-option" data-value="Тестовый2">Тестовый2</span>
+                                <span class="zelray-prices__select-option" data-value="Тестовый3">Тестовый2</span>
+                                <span class="zelray-prices__select-option" data-value="Тестовый4">Тестовый2</span>
+                                <span class="zelray-prices__select-option" data-value="Тестовый5">Тестовый2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="zelray-prices__datepicker">
+                    <div class="text">Дата:</div>
+                    <input type="text" id="datepicker">
+                </div>
+            </div>
+
+
+            <div class="zelray">
+                <div class="zelray__tabs">
+                    <div class="zelray__tab active-tab" data-tab="tab1">
+                        <span>Хутор</span>
+                    </div>
+                    <div class="zelray__tab" data-tab="tab2">
+                        <span>Маленький рай</span>
+                    </div>
+                    <div class="zelray__tab" data-tab="tab3">
+                        <span>Грунт</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="zelray-prices__elements">
+                <form action="#" method="#" class="search" novalidate="novalidate">
+                    <label for="zelray-prices__search-field">
+                        <input type="text" id="zelray-prices__search-field"
+                               placeholder="Активное поле">
+                        <button type="button" id="zelray-prices__clear-btn" style="display: none;">×</button>
+                    </label>
+                    <div id="zelray-prices__search-btn">
+                        <span style="background-image: url('/img/vectors/ic_search.svg')"></span>
+                    </div>
+                </form>
+                <button class="btn-green">
+                    <span class="icon" style="background-image: url('/img/vectors/ic_correct.svg')"></span>
+                    <span class="text">Редактировать выбранное</span>
+                </button>
+            </div>
+
+            <div id="tab1" class="zelray__tab-content active-content">
+                <div class="zelray-prices__table-wrapper">
+                    <table id="table">
+                        <thead>
+                        <tr>
+                            <th data-name="name">Название товара</th>
+                            <th data-name="container">Контейнер</th>
+                            <th data-name="size">Размер</th>
+                            <th data-name="price-usd">Цена <span>доллары</span></th>
+                            <th data-name="price-bel">Цена <span>бел. рубли</span></th>
+                            <th data-name="count">Количество</th>
+                            <th data-name="count-touch">Выбрать кол-во</th>
+                            <th data-name="basket">В корзину</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td data-label="Название товара">
+                                <div class="zelray-prices__table-name">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox">
+                                        <span class="checkbox__elem"></span>
+                                    </label>
+                                    <div class="name">Ель Бревера (Picea breweriana)*</div>
+                                </div>
+                            </td>
+                            <td data-label="Контейнер">С45</td>
+                            <td data-label="Размер">-</td>
+                            <td data-label="Цена, доллары">20,0</td>
+                            <td data-label="Цена бел. рубли">64,00</td>
+                            <td data-label="Количество">122</td>
+                            <td data-label="Выбрать кол-во">
+                                <div class="counters">
+                                    <button class="minus"><span
+                                            style="background-image: url('/img/vectors/minus.svg')"></span></button>
+                                    <input type="text" value="1" inputmode="numeric">
+                                    <button class="plus"><span
+                                            style="background-image: url('/img/vectors/plus.svg')"></span></button>
+                                </div>
+                            </td>
+                            <td data-label="В корзину">
+                                <button><span style="background-image: url('/img/vectors/ic_trash.svg')"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Название товара">
+                                <div class="zelray-prices__table-name">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox">
+                                        <span class="checkbox__elem"></span>
+                                    </label>
+                                    <div class="name">Ель Бревера (Picea breweriana)*</div>
+                                </div>
+                            </td>
+                            <td data-label="Контейнер">С2</td>
+                            <td data-label="Размер">120-140</td>
+                            <td data-label="Цена доллары">3,0</td>
+                            <td data-label="Цена бел. рубли">9,60</td>
+                            <td data-label="Количество">43</td>
+                            <td data-label="Выбрать кол-во">
+                                <div class="counters">
+                                    <button class="minus"><span
+                                            style="background-image: url('/img/vectors/minus.svg')"></span></button>
+                                    <input type="text" value="1" inputmode="numeric">
+                                    <button class="plus"><span
+                                            style="background-image: url('/img/vectors/plus.svg')"></span></button>
+                                </div>
+                            </td>
+                            <td data-label="В корзину">
+                                <button><span style="background-image: url('/img/vectors/ic_trash.svg')"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Название товара">
+                                <div class="zelray-prices__table-name">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="checkbox">
+                                        <span class="checkbox__elem"></span>
+                                    </label>
+                                    <div class="name">Можжевельник горизонтальный (Juniperus horizontalis "Andorra
+                                        Variegata")*
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Контейнер">С2</td>
+                            <td data-label="Размер">10</td>
+                            <td data-label="Цена доллары">3,0</td>
+                            <td data-label="Цена бел. рубли">9,60</td>
+                            <td data-label="Количество">122</td>
+                            <td data-label="Выбрать кол-во">
+                                <div class="counters">
+                                    <button class="minus"><span
+                                            style="background-image: url('/img/vectors/minus.svg')"></span></button>
+                                    <input type="text" value="1" inputmode="numeric">
+                                    <button class="plus"><span
+                                            style="background-image: url('/img/vectors/plus.svg')"></span></button>
+                                </div>
+                            </td>
+                            <td data-label="В корзину">
+                                <button><span style="background-image: url('/img/vectors/ic_trash.svg')"></span>
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+            <div id="tab2" class="zelray__tab-content"></div>
+            <div id="tab3" class="zelray__tab-content"></div>
+
+
+            <div class="zelray-prices__order">
+                <div class="zelray-prices__order-count">Выбрано товаров: <span>3</span></div>
+                <div class="zelray-prices__order-submit">
+                    <div class="total">Итого: <span>416</span>руб.</div>
+                    <button class="btn-green">
+                        <span class="icon" style="background-image: url('/img/vectors/ic_trash.svg')"></span>
+                        <span class="text">в корзину</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+@@include('html/footer.html',{})
+
+
+<script src="js/app.min.js"></script>
+</body>
+</html>

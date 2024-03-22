@@ -1,0 +1,66 @@
+$fontFamily: "Mulish";
+
+$fontSize: "";
+$mainColor: "";
+
+
+html {
+  height: 100%;
+
+}
+
+
+body {
+  color: $mainColor;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+
+$maxWidth: 1320;
+
+
+$md0: 1439.98;
+$md1: 1199.98;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 575.98;
+$md5: 319.98;
+
+._container {
+  max-width: $maxWidth + px;
+  padding: 0 15px;
+  margin: 0 auto;
+  @media screen and (min-width: 480px) {
+    padding: 0 16px;
+    max-width: 400px;
+  }
+
+  @media screen and (min-width: 575.98px) {
+    padding: 0 16px;
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: 767.98px) {
+    padding: 0 20px;
+    max-width: 705px;
+  }
+
+  @media screen and (min-width: 991.98px) {
+    padding: 0 30px;
+    max-width: 990px;
+  }
+
+  @media screen and (min-width: 1199.98px) {
+    padding: 0 30px;
+    max-width: 1200px;
+  }
+
+  @media screen and (min-width: 1439.98px) {
+    padding: 0 15px;
+    max-width: 1720px;
+  }
+}

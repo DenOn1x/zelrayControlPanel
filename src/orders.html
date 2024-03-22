@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Заявки"
+})
+<body>
+@@include('html/header.html',{})
+<main>
+    <section class="zelray-panel">
+        <div class="zelray-panel__container _container">
+            <div class="zelray-panel__wrapper">
+                <ul>
+                    <li><a href="prices.html"><span style="background-image: url('/img/vectors/ic_goods.svg')"></span>Товары</a>
+                    </li>
+                    <li class="active"><a href="orders.html"><span style="background-image: url('/img/vectors/ic_orders.svg')"></span>Заявки за 3
+                        дня</a>
+                    </li>
+                    <li><a href="trash.html"><span style="background-image: url('/img/vectors/ic_trash.svg')"></span>Корзина</a>
+                    </li>
+                </ul>
+                <div class="zelray-panel__logout">
+                    <a href="index.html"><span style="background-image: url('/img/vectors/ic_logout.svg')"></span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="zelray-orders">
+        <div class="zelray-orders__container _container">
+            <h1>Заявки за последние 3 дня</h1>
+            <div class="zelray-orders__wrapper">
+                <div class="zelray-orders__item">
+                    <div class="title">Заявка №153564</div>
+                    <div class="zelray-orders__item-info">
+                        <div class="box">
+                            <span>Клиент</span>
+                            <div class="value">Михаил Синеокий</div>
+                        </div>
+                        <div class="box">
+                            <span>Прайс</span>
+                            <div class="value">Хутор</div>
+                        </div>
+                        <div class="box">
+                            <span>Общее количество товаров</span>
+                            <div class="value">15</div>
+                        </div>
+                        <div class="box">
+                            <span>Скидка</span>
+                            <div class="value">–</div>
+                        </div>
+                        <div class="box">
+                            <span>Общая цена</span>
+                            <div class="value">416 руб.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="zelray-orders__item">
+                    <div class="title">Заявка №153563</div>
+                    <div class="zelray-orders__item-info">
+                        <div class="box">
+                            <span>Клиент</span>
+                            <div class="value">Михаил Синеокий</div>
+                        </div>
+                        <div class="box">
+                            <span>Прайс</span>
+                            <div class="value">Маленький рай</div>
+                        </div>
+                        <div class="box">
+                            <span>Общее количество товаров</span>
+                            <div class="value">12</div>
+                        </div>
+                        <div class="box">
+                            <span>Скидка</span>
+                            <div class="value">10</div>
+                        </div>
+                        <div class="box">
+                            <span>Общая цена</span>
+                            <div class="value">212 руб.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="zelray-orders__item">
+                    <div class="title">Заявка №153562</div>
+                    <div class="zelray-orders__item-info">
+                        <div class="box">
+                            <span>Клиент</span>
+                            <div class="value">Михаил Синеокий</div>
+                        </div>
+                        <div class="box">
+                            <span>Прайс</span>
+                            <div class="value">Грунт</div>
+                        </div>
+                        <div class="box">
+                            <span>Общее количество товаров</span>
+                            <div class="value">107</div>
+                        </div>
+                        <div class="box">
+                            <span>Скидка</span>
+                            <div class="value">5</div>
+                        </div>
+                        <div class="box">
+                            <span>Общая цена</span>
+                            <div class="value">1064 руб.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="zelray-orders__item">
+                    <div class="title">Заявка №153533</div>
+                    <div class="zelray-orders__item-info">
+                        <div class="box">
+                            <span>Клиент</span>
+                            <div class="value">Алексей Поддубный</div>
+                        </div>
+                        <div class="box">
+                            <span>Прайс</span>
+                            <div class="value">Маленький рай</div>
+                        </div>
+                        <div class="box">
+                            <span>Общее количество товаров</span>
+                            <div class="value">11</div>
+                        </div>
+                        <div class="box">
+                            <span>Скидка</span>
+                            <div class="value">10</div>
+                        </div>
+                        <div class="box">
+                            <span>Общая цена</span>
+                            <div class="value">212 руб.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="zelray-orders__item">
+                    <div class="title">Заявка №153515</div>
+                    <div class="zelray-orders__item-info">
+                        <div class="box">
+                            <span>Клиент</span>
+                            <div class="value">Алексей Поддубныйй</div>
+                        </div>
+                        <div class="box">
+                            <span>Прайс</span>
+                            <div class="value">Грунт</div>
+                        </div>
+                        <div class="box">
+                            <span>Общее количество товаров</span>
+                            <div class="value">6</div>
+                        </div>
+                        <div class="box">
+                            <span>Скидка</span>
+                            <div class="value">5</div>
+                        </div>
+                        <div class="box">
+                            <span>Общая цена</span>
+                            <div class="value">117 руб.</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+@@include('html/footer.html',{})
+
+<script src="js/app.min.js"></script>
+</body>
+</html>

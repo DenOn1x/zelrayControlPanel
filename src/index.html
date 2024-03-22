@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Логин"
+})
+<body>
+@@include('html/header.html',{})
+<main>
+    <section class="zelray-login">
+        <div class="zelray-login__container _container">
+            <div class="zelray-login__wrapper">
+                <div class="zelray-login__logo">
+                    <a href="/" aria-label="home">
+                        <span class="bgimage"
+                              style="background-image: url('/img/vectors/logo.svg')"></span>
+                    </a>
+                </div>
+                <div class="zelray-login__form-wrapper">
+                    <h1>Управление товарами <span>и заявками</span></h1>
+                    <div class="text">Введите свой логин и пароль для работы с товарами</div>
+                    <form action="/" data-form="banner" method="POST" class="zelray-login__form">
+                        <div class="zelray-login__field">
+                            <label for="LOGIN">
+                                <input type="text" required name="login" id="LOGIN" placeholder="Ваш логин">
+                            </label>
+                        </div>
+                        <div class="zelray-login__field">
+                            <label for="PASSWORD">
+                                <input type="password" required name="password" id="PASSWORD" placeholder="Пароль">
+                            </label>
+                        </div>
+                        <button class="btn-green btn-enter">Войти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@@include('html/footer.html',{})
+
+<script src="js/app.min.js"></script>
+</body>
+</html>
