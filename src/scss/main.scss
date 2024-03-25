@@ -368,7 +368,7 @@ main {
     &__item {
       padding: 12px 16px;
       display: grid;
-      grid-template-columns: 60% 30% 10%;
+      grid-template-columns: 50% 30% 10%;
       align-items: center;
       justify-content: space-between;
       border-top: 1px solid #E6E6E6;
@@ -571,6 +571,7 @@ main {
       font-size: 16px;
       font-weight: 700;
       line-height: 150%;
+      transition: .3s ease;
 
       &.active-tab {
         color: #141414;
@@ -588,6 +589,14 @@ main {
 
       span {
 
+      }
+
+      @media screen and (min-width: 991.98px) {
+        &:hover {
+          span {
+            color: #141414;
+          }
+        }
       }
     }
 
@@ -961,7 +970,9 @@ main {
           cursor: pointer;
           background: none;
           color: #FF0000;
-          font-size: 20px;
+          font-size: 22px;
+          width: 30px;
+          height: 30px;
         }
 
         label {
@@ -1014,25 +1025,31 @@ main {
           //display: -webkit-box;
           padding: 16px;
           border-top: 1px solid #E6E6E6;
-          border-left: 2px solid transparent;
-          border-right: 2px solid transparent;
-          margin: 2px 0;
+          //border-left: 2px solid transparent;
+          //border-right: 2px solid transparent;
+          //margin: 2px 0;
           display: flex;
           flex-wrap: wrap;
           align-items: center;
           justify-content: space-between;
           row-gap: 16px;
+          position: relative;
 
           &:last-child {
             border-bottom: 1px solid #E6E6E6;
           }
 
           &.selected {
-            outline: 2px solid #25B825;
             background: #F9FFF5;
-            @media screen and (min-width: 1199.98px) {
-              outline: none;
+
+            &:after {
+              content: '';
+              width: 100%;
+              height: calc(100% + 4px);
               border: 2px solid #25B825;
+              position: absolute;
+              left: 0;
+              top: -2px;
             }
           }
         }
@@ -1095,6 +1112,7 @@ main {
             cursor: pointer;
             border-radius: 6px;
             background: #25B825;
+            transition: .3s ease;
 
             span {
               display: block;
@@ -1106,12 +1124,19 @@ main {
               background-position: center;
               transition: 0.3s ease;
             }
+
+            @media screen and (min-width: 991.98px) {
+              &:hover {
+                background: #007E2A;
+              }
+            }
           }
         }
 
         @media screen and (min-width: 1199.98px) {
           thead {
             display: table-header-group;
+            background: #F7F7F7;
 
             tr {
               border-top: 1px solid #E6E6E6;
@@ -1126,8 +1151,13 @@ main {
                 font-weight: 700;
                 line-height: 142%;
 
+                &:first-child {
+                  padding-left: 34px;
+                }
+
                 &:last-child {
                   text-align: right;
+                  padding-right: 14px;
                 }
 
                 span {
@@ -1145,7 +1175,6 @@ main {
             display: table-row;
             width: 100%;
             border-top: 0;
-
             border-bottom: 1px solid #E6E6E6;
           }
           td {
