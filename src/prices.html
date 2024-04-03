@@ -216,6 +216,41 @@
 
         </div>
     </section>
+
+    <div class="popup" id="modal">
+        <div class="popup__wrapper">
+            <div class="popup__body">
+                <form action="#" data-form="banner" method="#">
+                    <div class="popup__field">
+                        <div class="text">Перенести в прайс:</div>
+                        <div class="popup__point-wrapper">
+                            <input type="radio" id="A" name="radio-group" checked>
+                            <label for="A">Маленький рай</label>
+                        </div>
+                        <div class="popup__point-wrapper">
+                            <input type="radio" id="B" name="radio-group">
+                            <label for="B">Грунт</label>
+                        </div>
+                    </div>
+                    <div class="popup__field popup__field--text">
+                        <div class="text">Изменить цену:</div>
+                        <label for="PRICE">
+                            <input type="text" id="PRICE" placeholder="Введите цену">
+                        </label>
+                    </div>
+                    <div class="popup__field popup__field--text">
+                        <div class="text">Изменить количество:</div>
+                        <label for="COUNT">
+                            <input type="text" id="COUNT" placeholder="123">
+                        </label>
+                    </div>
+                    <button class="btn-green">Применить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
 </main>
 @@include('html/footer.html',{})
 
